@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.simple.simplejob.ui.activity.ChatDetailsActivity">
+    <FrameLayout
+        android:id="@+id/chat_deatils_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/main_bar" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/backclr"
+                    android:cacheColorHint="#00000000"
+                    android:divider="#00000000"
+                    android:listSelector="#00000000"
+                    android:stackFromBottom="true"
+                    android:transcriptMode="alwaysScroll">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@android:id/empty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="empty list"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/input_bar"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/backclr"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/lyt_thread"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/main_activity_emoji_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/cardview_light_background"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+
+                        <ImageView
+                            android:id="@+id/emojicon_icon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+
+                            android:padding="12dp"
+
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/smiley"
+
+                            />
+
+                        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                            android:id="@+id/message_edittext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:imeOptions="actionSend"
+                            android:importantForAutofill="no"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLines="3"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/btn_gallery"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/media" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/btn_send_lay"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/buutonshape">
+
+                    <ImageView
+
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:contentDescription="Send"
+                        android:src="@drawable/send" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
+

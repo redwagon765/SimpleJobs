@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backclr"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_bar"></include>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="8dp"
+        android:gravity="start|center"
+        android:text="Visibility"
+        android:textColor="@color/barblue"
+        android:textSize="18sp" />
+
+
+    <RadioGroup
+        android:id="@+id/my_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:checked="true"
+            android:text="All" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Invite - only" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Public" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="8dp"
+        android:gravity="start|center"
+        android:text="Status"
+        android:textColor="@color/barblue"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:checked="true"
+            android:text="All" />
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Drafts" />
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Open" />
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Filled" />
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Closed" />
+
+
+    </RadioGroup>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_margin="8dp"
+            android:layout_width="180dp"
+            android:layout_height="35dp"
+
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="Clear"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="13sp" />
+
+        <Button
+            android:layout_margin="8dp"
+            android:layout_width="180dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/barblue"
+            android:gravity="center"
+            android:text="Apply"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

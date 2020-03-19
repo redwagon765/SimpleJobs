@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/location_frame"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<include layout="@layout/main_bar"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Hi, nice to meet you!"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="See Services around"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/currnt"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@color/black"
+                android:text="At current location"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="13dp" />
+
+
+            <Button
+                android:id="@+id/click_apoiment"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backgraund_button"
+                android:padding="15dp"
+                android:text="At some other location"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

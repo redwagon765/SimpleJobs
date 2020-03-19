@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.example.simplejob"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        multiDexEnabled true
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    repositories {
+        // You can also use jcenter if you prefer
+        mavenCentral()
+
+        maven { url "https://dl.bintray.com/hani-momanii/maven" }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    allprojects {
+        repositories {
+            jcenter()
+            maven {
+                url "https://jitpack.io"
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.github.joielechong:countrycodepicker:2.1.5'
+    implementation 'com.github.scrounger:countrycurrencypicker:1.0.4'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.github.joielechong:countrycodepicker:2.4.1'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'hani.momanii.supernova_emoji_library:supernova-emoji-library:0.0.2'
+
+    implementation 'com.hbb20:ccp:2.3.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
